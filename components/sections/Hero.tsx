@@ -30,7 +30,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.08, ease: "easeOut" }}
-          className="font-fraunces font-bold text-3xl md:text-5xl lg:text-6xl text-text-primary leading-tight tracking-tight max-w-4xl"
+          className="font-fraunces font-bold text-2xl md:text-4xl lg:text-5xl text-text-primary leading-tight tracking-tight max-w-4xl"
         >
           <span className="text-accent">+80 RECURSOS VISUAIS</span>{" "}
           ORGANIZADOS POR DEMANDA PRA FAZER O ADOLESCENTE FECHADO{" "}
