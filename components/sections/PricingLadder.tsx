@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Check, X } from "lucide-react";
+import Image from "next/image";
 import SectionHeader from "@/components/shared/SectionHeader";
 
 export default function PricingLadder() {
@@ -9,7 +10,7 @@ export default function PricingLadder() {
     <section id="preco" className="bg-surface-2 px-5 md:px-8 py-14 md:py-20">
       <div className="max-w-6xl mx-auto">
         <SectionHeader
-title="Qual se encaixa melhor na sua realidade?"
+          title={<>Qual se encaixa <span className="text-accent">melhor</span> na sua realidade?</>}
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
@@ -28,7 +29,8 @@ title="Qual se encaixa melhor na sua realidade?"
               </span>
             </div>
 
-            <div className="mt-2">
+            {/* Título e preço centralizados */}
+            <div className="text-center mt-2">
               <p className="text-xs uppercase tracking-widest text-highlight font-inter font-semibold mb-3">
                 Completo
               </p>
@@ -40,8 +42,20 @@ title="Qual se encaixa melhor na sua realidade?"
               </p>
             </div>
 
+            {/* Imagem */}
+            <div className="w-full max-w-xs mx-auto">
+              <Image
+                src="/mockupteen.png"
+                alt="Kit Consultório Teen Completo"
+                width={600}
+                height={450}
+                className="w-full h-auto rounded-xl"
+              />
+            </div>
+
             <div className="w-full h-px bg-border" />
 
+            {/* Lista — alinhada à esquerda */}
             <div className="flex flex-col gap-3 w-full">
               {[
                 "+80 recursos visuais terapêuticos",
@@ -76,7 +90,8 @@ title="Qual se encaixa melhor na sua realidade?"
             transition={{ duration: 0.4, ease: "easeOut" }}
             className="bg-surface-1 border border-border rounded-2xl p-8 md:p-10 flex flex-col gap-6 order-2 md:order-1"
           >
-            <div>
+            {/* Título e preço centralizados */}
+            <div className="text-center">
               <p className="text-xs uppercase tracking-widest text-text-subtle font-inter font-semibold mb-3">
                 Básico
               </p>
@@ -86,8 +101,20 @@ title="Qual se encaixa melhor na sua realidade?"
               <p className="text-text-muted font-inter text-sm mt-2">à vista</p>
             </div>
 
+            {/* Imagem */}
+            <div className="w-full max-w-xs mx-auto">
+              <Image
+                src="/mockupcru.png"
+                alt="Kit Consultório Teen Básico"
+                width={600}
+                height={450}
+                className="w-full h-auto rounded-xl"
+              />
+            </div>
+
             <div className="w-full h-px bg-border" />
 
+            {/* Lista — alinhada à esquerda */}
             <div className="flex flex-col gap-3 w-full">
               <div className="flex gap-3 items-center">
                 <Check className="w-5 h-5 text-accent flex-shrink-0" strokeWidth={2} />

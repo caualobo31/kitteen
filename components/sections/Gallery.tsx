@@ -18,8 +18,7 @@ export default function Gallery() {
     <section id="galeria" className="bg-surface-2 py-14 md:py-20 overflow-hidden">
       <div className="max-w-6xl mx-auto px-5 md:px-8">
         <SectionHeader
-title="Se você atende adolescente, já sabe como funciona..."
-          subtitle="Veja alguns exemplos do que vem dentro do kit:"
+title={<>Veja o <span className="text-accent">material por dentro:</span></>}
         />
       </div>
 

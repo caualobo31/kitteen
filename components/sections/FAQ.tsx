@@ -45,7 +45,7 @@ export default function FAQ() {
     <section className="bg-surface-2 px-5 md:px-8 py-14 md:py-20">
       <div className="max-w-6xl mx-auto">
         <SectionHeader
-title="Respondendo o que você tá pensando agora."
+title={<>Respondendo <span className="text-accent">o que você tá pensando</span> agora.</>}
         />
 
         <motion.div

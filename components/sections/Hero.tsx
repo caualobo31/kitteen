@@ -33,7 +33,7 @@ export default function Hero() {
           className="font-fraunces font-bold text-2xl md:text-4xl lg:text-5xl text-text-primary leading-tight tracking-tight max-w-4xl"
         >
           <span className="text-accent">+80 RECURSOS VISUAIS</span>{" "}
-          ORGANIZADOS POR DEMANDA PRA FAZER O ADOLESCENTE FECHADO{" "}
+          PARA FAZER O ADOLESCENTE FECHADO{" "}
           <span className="text-accent">SE ABRIR</span>
         </motion.h1>
 

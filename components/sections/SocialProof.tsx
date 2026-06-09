@@ -30,7 +30,7 @@ export default function SocialProof() {
     <section className="bg-background px-5 md:px-8 py-14 md:py-20">
       <div className="max-w-6xl mx-auto">
         <SectionHeader
-title="Quem já testou conta:"
+title={<><span className="text-accent">Quem já testou</span> conta:</>}
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">

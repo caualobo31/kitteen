@@ -2,9 +2,11 @@
 
 import { motion } from "framer-motion";
 
+import { ReactNode } from "react";
+
 interface Props {
   caption?: string;
-  title: string;
+  title: ReactNode;
   subtitle?: string;
 }
 

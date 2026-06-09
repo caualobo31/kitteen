@@ -21,15 +21,13 @@ export default function InactionCost() {
           className="flex flex-col items-center gap-8"
         >
           <div>
-            <h2 className="font-fraunces font-semibold text-2xl md:text-4xl leading-tight tracking-tight mb-4">
-              <span className="text-white">Quanto tempo você ainda vai adaptar material infantil</span>{" "}
-              <span className="text-[#FFE5B4]">pra quem tem 15 anos?</span>
+            <h2 className="font-fraunces font-semibold text-2xl md:text-4xl leading-tight tracking-tight mb-4 text-white">
+              Seu paciente adolescente merece recursos feitos pra ele.
             </h2>
             <p className="text-white/90 font-inter text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-              Cada sessão sem material adequado é uma sessão em que o seu
-              paciente te vê como mais uma adulta que não entende. Adolescente
-              que não se sente entendido na segunda sessão raramente volta pra
-              terceira.
+              Você não atende adulto com ficha de criança. Não atende criança
+              com técnica de adulto. Adolescente também precisa do que foi
+              pensado pra ele.
             </p>
           </div>
 

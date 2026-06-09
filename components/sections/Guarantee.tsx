@@ -17,7 +17,7 @@ export default function Guarantee() {
           <Shield className="w-16 h-16 text-success" strokeWidth={1.5} />
 
           <h2 className="font-fraunces font-semibold text-2xl md:text-4xl text-text-primary leading-tight tracking-tight">
-            Garantia incondicional de 15 dias
+            Garantia <span className="text-accent">incondicional</span> de 15 dias
           </h2>
 
           <p className="text-base md:text-lg text-text-muted font-inter leading-relaxed">

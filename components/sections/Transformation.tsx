@@ -19,7 +19,7 @@ export default function Transformation() {
     <section className="bg-surface-2 px-5 md:px-8 py-14 md:py-20">
       <div className="max-w-6xl mx-auto">
         <SectionHeader
-title="Imagina chegar na sessão e:"
+title={<>Seu trabalho fica <span className="text-accent">mais leve</span> depois disso...</>}
         />
 
         <div className="flex flex-col gap-4 max-w-3xl mx-auto">
