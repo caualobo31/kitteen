@@ -14,6 +14,7 @@ export default function PricingLadder() {
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+
           {/* Completo — first on mobile */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -29,18 +30,10 @@ export default function PricingLadder() {
               </span>
             </div>
 
-            {/* Título e preço centralizados */}
-            <div className="text-center mt-2">
-              <p className="text-xs uppercase tracking-widest text-highlight font-inter font-semibold mb-3">
-                Completo
-              </p>
-              <p className="font-fraunces font-bold text-5xl text-text-primary leading-none tracking-tight">
-                R$37,90
-              </p>
-              <p className="text-text-muted font-inter text-sm mt-2">
-                à vista ou 12x de R$3,89
-              </p>
-            </div>
+            {/* Título */}
+            <p className="text-xs uppercase tracking-widest text-highlight font-inter font-semibold text-center mt-2">
+              Completo
+            </p>
 
             {/* Imagem */}
             <div className="w-full max-w-xs mx-auto aspect-[4/3] relative overflow-hidden rounded-xl">
@@ -52,9 +45,25 @@ export default function PricingLadder() {
               />
             </div>
 
+            {/* Preço com ancoragem */}
+            <div className="text-center">
+              <p className="font-inter text-sm text-red-400 line-through mb-1">
+                De R$97,00
+              </p>
+              <p className="font-fraunces font-bold text-5xl text-text-primary leading-none tracking-tight">
+                R$37,90
+              </p>
+              <p className="text-text-muted font-inter text-sm mt-1">
+                à vista ou 12x de R$3,89
+              </p>
+              <p className="mt-2 inline-block bg-highlight/10 text-highlight font-inter font-semibold text-xs px-3 py-1 rounded-full">
+                Você economiza R$59,10
+              </p>
+            </div>
+
             <div className="w-full h-px bg-border" />
 
-            {/* Lista — alinhada à esquerda */}
+            {/* Lista */}
             <div className="flex flex-col gap-3 w-full">
               {[
                 "+80 recursos visuais terapêuticos",
@@ -89,16 +98,10 @@ export default function PricingLadder() {
             transition={{ duration: 0.4, ease: "easeOut" }}
             className="bg-surface-1 border border-border rounded-2xl p-8 md:p-10 flex flex-col gap-6 order-2 md:order-1"
           >
-            {/* Título e preço centralizados */}
-            <div className="text-center">
-              <p className="text-xs uppercase tracking-widest text-text-subtle font-inter font-semibold mb-3">
-                Básico
-              </p>
-              <p className="font-fraunces font-bold text-5xl text-text-primary leading-none tracking-tight">
-                R$19,90
-              </p>
-              <p className="text-text-muted font-inter text-sm mt-2">à vista</p>
-            </div>
+            {/* Título */}
+            <p className="text-xs uppercase tracking-widest text-text-subtle font-inter font-semibold text-center">
+              Básico
+            </p>
 
             {/* Imagem */}
             <div className="w-full max-w-xs mx-auto aspect-[4/3] relative overflow-hidden rounded-xl">
@@ -110,9 +113,17 @@ export default function PricingLadder() {
               />
             </div>
 
+            {/* Preço */}
+            <div className="text-center">
+              <p className="font-fraunces font-bold text-5xl text-text-primary leading-none tracking-tight">
+                R$19,90
+              </p>
+              <p className="text-text-muted font-inter text-sm mt-1">à vista</p>
+            </div>
+
             <div className="w-full h-px bg-border" />
 
-            {/* Lista — alinhada à esquerda */}
+            {/* Lista */}
             <div className="flex flex-col gap-3 w-full">
               <div className="flex gap-3 items-center">
                 <Check className="w-5 h-5 text-accent flex-shrink-0" strokeWidth={2} />
@@ -141,6 +152,7 @@ export default function PricingLadder() {
               Quero o Básico
             </a>
           </motion.div>
+
         </div>
       </div>
     </section>
