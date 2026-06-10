@@ -43,13 +43,12 @@ export default function PricingLadder() {
             </div>
 
             {/* Imagem */}
-            <div className="w-full max-w-xs mx-auto">
+            <div className="w-full max-w-xs mx-auto aspect-[4/3] relative overflow-hidden rounded-xl">
               <Image
                 src="/mockupteen.png"
                 alt="Kit Consultório Teen Completo"
-                width={600}
-                height={450}
-                className="w-full h-auto rounded-xl"
+                fill
+                className="object-contain"
               />
             </div>
 
@@ -102,13 +101,12 @@ export default function PricingLadder() {
             </div>
 
             {/* Imagem */}
-            <div className="w-full max-w-xs mx-auto">
+            <div className="w-full max-w-xs mx-auto aspect-[4/3] relative overflow-hidden rounded-xl">
               <Image
                 src="/mockupcru.png"
                 alt="Kit Consultório Teen Básico"
-                width={600}
-                height={450}
-                className="w-full h-auto rounded-xl"
+                fill
+                className="object-contain"
               />
             </div>
 
