@@ -32,6 +32,12 @@ const bonuses = [
     title: "Banco de Frases pra Destravar a Sessão",
     desc: "60 perguntas testadas pra quando ele trava ou responde monossilábico.",
     from: "R$27,00",
+  },
+  {
+    n: "04",
+    title: "Modelos de Fichas de Anamnese e Devolutivas",
+    desc: "Fichas prontas pra coletar histórico e devolver resultados aos pais de forma clara e profissional.",
+    from: "R$37,00",
     full: true,
   },
 ];
@@ -101,7 +107,7 @@ export default function Stack() {
           transition={{ duration: 0.4, ease: "easeOut" }}
           className="text-text-primary font-inter text-base md:text-lg leading-relaxed mb-6"
         >
-          E não para por aí. No kit completo, você ainda recebe 3 bônus que
+          E não para por aí. No kit completo, você ainda recebe 4 bônus que
           complementam o kit e resolvem as maiores dores do dia a dia clínico:
         </motion.p>
 
@@ -114,7 +120,7 @@ export default function Stack() {
           className="mb-6"
         >
           <span className="inline-block bg-accent text-white font-inter font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full">
-            3 Bônus Exclusivos
+            4 Bônus Exclusivos
           </span>
         </motion.div>
 

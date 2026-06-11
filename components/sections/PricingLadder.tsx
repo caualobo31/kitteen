@@ -70,6 +70,7 @@ export default function PricingLadder() {
                 "Bônus 1: Guia de Primeira Sessão",
                 "Bônus 2: Cartilha Conversando com os Pais",
                 "Bônus 3: Banco de Frases pra Destravar",
+                "Bônus 4: Fichas de Anamnese e Devolutivas",
                 "Acesso vitalício",
                 "Garantia de 15 dias",
               ].map((item) => (

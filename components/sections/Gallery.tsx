@@ -1,16 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Image as ImageIcon } from "lucide-react";
+import Image from "next/image";
 import SectionHeader from "@/components/shared/SectionHeader";
 
 const mockups = [
-  "Baralho de Conversa: Ansiedade",
-  "Dilemas: Identidade",
-  "Ficha TCC: Pensamento/Emoção",
-  "Redes Sociais: Comparação",
-  "Autoestima: Imagem",
-  "Conflito com os Pais",
+  "/exemplo1.png",
+  "/exemplo2.png",
+  "/exemplo3.png",
+  "/exemplo4.png",
+  "/exemplo5.png",
+  "/exemplo6.png",
 ];
 
 export default function Gallery() {
@@ -18,36 +18,36 @@ export default function Gallery() {
     <section id="galeria" className="bg-surface-2 py-14 md:py-20 overflow-hidden">
       <div className="max-w-6xl mx-auto px-5 md:px-8">
         <SectionHeader
-title={<>Veja o <span className="text-accent">material por dentro:</span></>}
+          title={<>Veja o <span className="text-accent">material por dentro:</span></>}
         />
       </div>
 
-      {/* Marquee — edge-to-edge */}
       <div className="overflow-hidden">
         <motion.div
           className="flex gap-4 w-max"
           animate={{ x: ["0%", "-50%"] }}
           transition={{
-            duration: 28,
+            duration: 32,
             repeat: Infinity,
             ease: "linear",
             repeatType: "loop",
           }}
         >
-          {[...mockups, ...mockups].map((label, i) => (
+          {[...mockups, ...mockups].map((src, i) => (
             <div
               key={i}
-              className="w-44 md:w-56 flex-shrink-0 aspect-[4/5] bg-surface-1 border border-border rounded-2xl flex flex-col items-center justify-center gap-3 p-4"
+              className="w-52 md:w-64 flex-shrink-0 aspect-[3/4] relative rounded-2xl overflow-hidden border border-border shadow-sm"
             >
-              <ImageIcon className="w-6 h-6 text-text-subtle" strokeWidth={1.5} />
-              <p className="text-text-subtle font-inter text-xs uppercase tracking-wider text-center leading-relaxed">
-                {label}
-              </p>
+              <Image
+                src={src}
+                alt={`Exemplo de recurso ${(i % mockups.length) + 1}`}
+                fill
+                className="object-cover"
+              />
             </div>
           ))}
         </motion.div>
       </div>
-
     </section>
   );
 }
