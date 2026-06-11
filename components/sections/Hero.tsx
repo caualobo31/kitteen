@@ -75,7 +75,7 @@ export default function Hero() {
             Quero meu kit agora
           </a>
           <p className="text-sm text-text-subtle font-inter">
-            +900 psicólogas já confiam nos Kits Consultório.
+            +2000 psicólogas já confiam nos Kits Consultório.
           </p>
         </motion.div>
 

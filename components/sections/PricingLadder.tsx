@@ -48,7 +48,7 @@ export default function PricingLadder() {
             {/* Preço com ancoragem */}
             <div className="text-center">
               <p className="font-inter text-sm text-red-400 line-through mb-1">
-                De R$97,00
+                De R$345,00
               </p>
               <p className="font-fraunces font-bold text-5xl text-text-primary leading-none tracking-tight">
                 R$37,90
@@ -57,7 +57,7 @@ export default function PricingLadder() {
                 à vista ou 12x de R$3,89
               </p>
               <p className="mt-2 inline-block bg-highlight/10 text-highlight font-inter font-semibold text-xs px-3 py-1 rounded-full">
-                Você economiza R$59,10
+                Você economiza R$307,10
               </p>
             </div>
 
