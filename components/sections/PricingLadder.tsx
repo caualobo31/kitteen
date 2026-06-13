@@ -51,13 +51,13 @@ export default function PricingLadder() {
                 De R$345,00
               </p>
               <p className="font-fraunces font-bold text-5xl text-text-primary leading-none tracking-tight">
-                R$37,90
+                R$27,90
               </p>
               <p className="text-text-muted font-inter text-sm mt-1">
-                à vista ou 12x de R$3,89
+                à vista ou 12x de R$2,89
               </p>
               <p className="mt-2 inline-block bg-highlight/10 text-highlight font-inter font-semibold text-xs px-3 py-1 rounded-full">
-                Você economiza R$307,10
+                Você economiza R$317,10
               </p>
             </div>
 
@@ -119,7 +119,7 @@ export default function PricingLadder() {
             {/* Preço */}
             <div className="text-center">
               <p className="font-fraunces font-bold text-5xl text-text-primary leading-none tracking-tight">
-                R$19,90
+                R$17,90
               </p>
               <p className="text-text-muted font-inter text-sm mt-1">à vista</p>
             </div>
