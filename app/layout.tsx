@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -34,13 +35,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={`${fraunces.variable} ${inter.variable}`}>
-      <head>
-        {/* TODO: inserir IDs reais */}
-        {/* <Script id="meta-pixel" strategy="afterInteractive">{`...`}</Script> */}
-        {/* <Script src="https://www.googletagmanager.com/gtag/js?id=GA_ID" strategy="afterInteractive" /> */}
-      </head>
       <body className="bg-background text-text-primary font-inter antialiased">
         {children}
+        <Script id="utmify-pixel" strategy="afterInteractive">{`
+          window.pixelId = "6a2cc718a1866dee26a8a4cb";
+          var a = document.createElement("script");
+          a.setAttribute("async", "");
+          a.setAttribute("defer", "");
+          a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+          document.head.appendChild(a);
+        `}</Script>
+        <Script
+          src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+          data-utmify-prevent-xcod-sck=""
+          data-utmify-prevent-subids=""
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

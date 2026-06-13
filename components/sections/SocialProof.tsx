@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
 import SectionHeader from "@/components/shared/SectionHeader";
