@@ -40,7 +40,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.16, ease: "easeOut" }}
-          className="text-base md:text-lg text-text-muted font-inter leading-relaxed max-w-xl"
+          className="text-sm md:text-base text-text-muted font-inter leading-relaxed max-w-xl"
         >
           Material pronto pra aplicar, com a linguagem que ele respeita.
         </motion.p>
