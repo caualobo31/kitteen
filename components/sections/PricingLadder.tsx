@@ -3,14 +3,44 @@
 import { motion } from "framer-motion";
 import { Check, X } from "lucide-react";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 import SectionHeader from "@/components/shared/SectionHeader";
+
+function Countdown() {
+  const [secs, setSecs] = useState(10 * 60);
+
+  useEffect(() => {
+    if (secs <= 0) return;
+    const id = setInterval(() => setSecs((s) => s - 1), 1000);
+    return () => clearInterval(id);
+  }, [secs]);
+
+  const mm = String(Math.floor(secs / 60)).padStart(2, "0");
+  const ss = String(secs % 60).padStart(2, "0");
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.4 }}
+      className="flex justify-center mb-6"
+    >
+      <span className="bg-[#F5E199] text-[#3B3209] font-inter font-bold text-xs md:text-sm px-6 py-2 rounded-full tracking-widest uppercase">
+        Oferta válida até: {mm}:{ss}
+      </span>
+    </motion.div>
+  );
+}
 
 export default function PricingLadder() {
   return (
     <section id="preco" className="bg-surface-2 px-5 md:px-8 py-14 md:py-20">
       <div className="max-w-6xl mx-auto">
+        <Countdown />
         <SectionHeader
-          title={<>Qual se encaixa <span className="text-accent">melhor</span> na sua realidade?</>}
+          title="Escolha seu kit"
+          subtitle="Os dois kits dão acesso imediato. A diferença está em o quanto você quer resolver de uma vez."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
