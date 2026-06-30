@@ -30,7 +30,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.08, ease: "easeOut" }}
-          className="font-fraunces font-bold text-2xl md:text-4xl lg:text-5xl text-text-primary leading-tight tracking-tight max-w-4xl"
+          className="font-fraunces font-bold text-xl md:text-4xl lg:text-5xl text-text-primary leading-tight tracking-tight max-w-4xl"
         >
           +80 RECURSOS TERAPÊUTICOS PARA QUALQUER DEMANDA QUE{" "}
           <span className="text-accent">ENTRAR NO SEU CONSULTÓRIO.</span>
