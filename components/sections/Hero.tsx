@@ -23,7 +23,7 @@ export default function Hero() {
           transition={{ duration: 0.4, ease: "easeOut" }}
           className="text-xs uppercase tracking-widest text-accent font-inter font-semibold"
         >
-          Para psicólogas que atendem adolescente
+          Atenda adolescentes sem improvisar, sem adaptar e sem travar.
         </motion.p>
 
         <motion.h1
@@ -32,9 +32,8 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.08, ease: "easeOut" }}
           className="font-fraunces font-bold text-2xl md:text-4xl lg:text-5xl text-text-primary leading-tight tracking-tight max-w-4xl"
         >
-          <span className="text-accent">+80 RECURSOS VISUAIS</span>{" "}
-          PARA FAZER O ADOLESCENTE FECHADO{" "}
-          <span className="text-accent">SE ABRIR</span>
+          +80 recursos terapêuticos para qualquer demanda que{" "}
+          <span className="text-accent">entrar no seu consultório.</span>
         </motion.h1>
 
         <motion.p
