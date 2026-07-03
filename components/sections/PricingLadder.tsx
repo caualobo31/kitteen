@@ -89,7 +89,7 @@ export default function PricingLadder() {
 
             <div className="text-center">
               <p className="font-fraunces font-bold text-5xl text-text-primary leading-none tracking-tight">
-                R$17,90
+                R$19,90
               </p>
               <p className="text-text-muted font-inter text-sm mt-1">Pagamento único</p>
             </div>
@@ -120,7 +120,7 @@ export default function PricingLadder() {
                 92% escolhem o Completo — +80 recursos e 4 bônus exclusivos
               </p>
               <p className="text-xs text-text-muted font-inter mt-1">
-                Por apenas R$10 a mais
+                Por apenas R$18 a mais
               </p>
             </div>
           </motion.div>
@@ -170,16 +170,16 @@ export default function PricingLadder() {
                 De R$345,00
               </p>
               <p className="font-fraunces font-bold text-5xl text-white leading-none tracking-tight">
-                R$27,90
+                R$37,90
               </p>
               <p className="text-white/60 font-inter text-sm mt-1">
-                à vista ou 12x de R$2,89
+                à vista ou 12x de R$3,16
               </p>
               <p className="text-white/50 font-inter text-xs mt-0.5">
                 pagamento único • acesso imediato
               </p>
               <p className="mt-2 font-inter font-semibold text-sm text-accent">
-                Você economiza R$317,10
+                Você economiza R$307,10
               </p>
             </div>
 
