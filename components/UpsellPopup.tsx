@@ -18,15 +18,9 @@ export default function UpsellPopup() {
   const cardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleClick = (e: MouseEvent) => {
-      const target = (e.target as Element).closest("[data-plano='basico']");
-      if (!target) return;
-      e.preventDefault();
-      setOpen(true);
-    };
-
-    document.addEventListener("click", handleClick, true);
-    return () => document.removeEventListener("click", handleClick, true);
+    const handler = () => setOpen(true);
+    document.addEventListener("upsell:open", handler);
+    return () => document.removeEventListener("upsell:open", handler);
   }, []);
 
   useEffect(() => {

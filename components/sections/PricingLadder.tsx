@@ -94,15 +94,16 @@ export default function PricingLadder() {
               <p className="text-text-muted font-inter text-sm mt-1">Pagamento único</p>
             </div>
 
-            <a
-              href="https://pay.wiapy.com/iyCj7VBNAt"
+            <button
               data-plano="basico"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center w-full border-2 border-border bg-surface-1 hover:bg-surface-2 text-text-primary font-inter font-semibold text-sm px-8 py-4 rounded-full transition-all duration-200 min-h-[44px]"
+              onClick={(e) => {
+                e.preventDefault();
+                document.dispatchEvent(new CustomEvent("upsell:open"));
+              }}
+              className="inline-flex items-center justify-center w-full border-2 border-border bg-surface-1 hover:bg-surface-2 text-text-primary font-inter font-semibold text-sm px-8 py-4 rounded-full transition-all duration-200 min-h-[44px] cursor-pointer"
             >
               Quero o Kit Básico
-            </a>
+            </button>
 
             <div className="w-full h-px bg-border" />
 
