@@ -8,6 +8,8 @@ import PricingLadder from "@/components/sections/PricingLadder";
 import Guarantee from "@/components/sections/Guarantee";
 import FAQ from "@/components/sections/FAQ";
 import Footer from "@/components/sections/Footer";
+import UpsellPopup from "@/components/UpsellPopup";
+
 export default function Home() {
   return (
     <main className="bg-background min-h-screen">
@@ -21,6 +23,7 @@ export default function Home() {
       <Guarantee />
       <FAQ />
       <Footer />
+      <UpsellPopup />
     </main>
   );
 }
