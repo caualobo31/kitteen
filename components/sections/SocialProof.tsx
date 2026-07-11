@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, ChevronsDown } from "lucide-react";
 import Image from "next/image";
 import SectionHeader from "@/components/shared/SectionHeader";
 
@@ -90,6 +90,20 @@ export default function SocialProof() {
               />
             ))}
           </div>
+        </div>
+
+        {/* Urgency bridge */}
+        <div className="mt-10 text-center flex flex-col items-center gap-2">
+          <p className="text-text-muted font-inter text-sm">
+            Oferta por tempo limitado. Garante o seu antes que encerre.
+          </p>
+          <a
+            href="#preco"
+            className="flex flex-col items-center gap-0.5 text-highlight font-inter font-semibold text-sm hover:opacity-70 transition-opacity duration-200"
+          >
+            Ver oferta
+            <ChevronsDown className="w-5 h-5" strokeWidth={2} />
+          </a>
         </div>
       </div>
     </section>
