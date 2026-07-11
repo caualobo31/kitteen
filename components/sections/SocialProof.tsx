@@ -7,7 +7,7 @@ import Image from "next/image";
 import SectionHeader from "@/components/shared/SectionHeader";
 
 const images = [
-  { src: "/dep 1.jpeg", alt: "Depoimento 1" },
+  { src: "/dep 1.png", alt: "Depoimento 1" },
   { src: "/dep 2.jpeg", alt: "Depoimento 2" },
   { src: "/dep 3.jpeg", alt: "Depoimento 3" },
 ];
