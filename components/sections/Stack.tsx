@@ -72,6 +72,7 @@ export default function Stack() {
               alt="Kit Consultório Teen"
               width={600}
               height={450}
+              sizes="(min-width: 768px) 288px, calc(100vw - 40px)"
               className="w-full h-auto rounded-xl"
             />
           </div>

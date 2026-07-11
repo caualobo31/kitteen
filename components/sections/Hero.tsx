@@ -56,6 +56,7 @@ export default function Hero() {
             alt="Kit Consultório Teen — recursos visuais terapêuticos para adolescentes"
             width={1200}
             height={900}
+            sizes="(min-width: 768px) 768px, 100vw"
             className="w-full h-auto rounded-2xl"
             priority
           />

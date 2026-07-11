@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Image from "next/image";
 import SectionHeader from "@/components/shared/SectionHeader";
 
@@ -23,16 +20,7 @@ export default function Gallery() {
       </div>
 
       <div className="overflow-hidden">
-        <motion.div
-          className="flex gap-4 w-max"
-          animate={{ x: ["0%", "-50%"] }}
-          transition={{
-            duration: 32,
-            repeat: Infinity,
-            ease: "linear",
-            repeatType: "loop",
-          }}
-        >
+        <div className="flex gap-4 w-max animate-marquee">
           {[...mockups, ...mockups].map((src, i) => (
             <div
               key={i}
@@ -42,11 +30,12 @@ export default function Gallery() {
                 src={src}
                 alt={`Exemplo de recurso ${(i % mockups.length) + 1}`}
                 fill
+                sizes="(min-width: 768px) 256px, 208px"
                 className="object-cover"
               />
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

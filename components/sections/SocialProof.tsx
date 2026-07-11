@@ -53,6 +53,7 @@ export default function SocialProof() {
                   alt={images[current].alt}
                   width={600}
                   height={900}
+                  sizes="(min-width: 768px) 512px, calc(100vw - 40px)"
                   className="w-full h-auto"
                   priority={current === 0}
                 />

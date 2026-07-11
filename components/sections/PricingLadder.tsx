@@ -83,6 +83,7 @@ export default function PricingLadder() {
                 src="/mockupcru.png"
                 alt="Kit Consultório Teen Básico"
                 fill
+                sizes="(min-width: 768px) 320px, calc(100vw - 80px)"
                 className="object-contain"
               />
             </div>
@@ -159,6 +160,7 @@ export default function PricingLadder() {
                 src="/mockupteen.png"
                 alt="Kit Consultório Teen Completo"
                 fill
+                sizes="(min-width: 768px) 320px, calc(100vw - 80px)"
                 className="object-contain"
               />
             </div>
