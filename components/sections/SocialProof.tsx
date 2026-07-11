@@ -33,7 +33,7 @@ export default function SocialProof() {
 
         <div className="relative max-w-lg mx-auto">
           {/* Carousel */}
-          <div className="overflow-hidden rounded-2xl aspect-[4/5] md:aspect-[3/4] relative bg-surface-1 border border-border">
+          <div className="overflow-hidden rounded-2xl relative bg-surface-1 border border-border">
             <AnimatePresence mode="wait" custom={direction}>
               <motion.div
                 key={current}
@@ -47,13 +47,13 @@ export default function SocialProof() {
                 animate="center"
                 exit="exit"
                 transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="absolute inset-0"
               >
                 <Image
                   src={images[current].src}
                   alt={images[current].alt}
-                  fill
-                  className="object-cover"
+                  width={600}
+                  height={900}
+                  className="w-full h-auto"
                   priority={current === 0}
                 />
               </motion.div>
