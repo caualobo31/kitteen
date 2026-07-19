@@ -188,7 +188,7 @@ export default function PricingLadder() {
             </div>
 
             <a
-              href="https://pay.cakto.com.br/wmdvexo_986664"
+              href="https://pay.wiapy.com/1neK1z4ecL_"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center w-full bg-accent hover:bg-accent-hover text-white font-inter font-semibold text-base px-10 py-5 rounded-full transition-all duration-200 hover:scale-[1.02] hover:shadow-lg hover:shadow-accent/30 min-h-[44px]"
