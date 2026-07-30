@@ -134,13 +134,6 @@ export default function PricingLadder() {
               Kit Completo
             </p>
 
-            {/* Badge recursos */}
-            <div className="flex justify-center">
-              <span className="bg-white/10 text-white font-inter font-bold text-xs px-5 py-1.5 rounded-full uppercase tracking-wider border border-white/20">
-                +80 recursos + 4 bônus exclusivos
-              </span>
-            </div>
-
             <div className="w-full max-w-xs mx-auto aspect-[4/3] relative overflow-hidden rounded-xl">
               <Image
                 src="/mockupteen.png"
@@ -177,7 +170,7 @@ export default function PricingLadder() {
               href="https://pay.wiapy.com/1neK1z4ecL_"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center w-full bg-accent hover:bg-accent-hover text-white font-inter font-semibold text-base px-10 py-5 rounded-full transition-all duration-200 hover:scale-[1.02] hover:shadow-lg hover:shadow-accent/30 min-h-[44px]"
+              className="inline-flex items-center justify-center w-full bg-accent hover:bg-accent-hover text-white font-inter font-semibold text-base px-10 py-5 rounded-full transition-all duration-200 hover:scale-[1.02] hover:shadow-lg hover:shadow-accent/30 min-h-[44px] anim-cta-pulse"
             >
               Quero o Kit Completo
             </a>
