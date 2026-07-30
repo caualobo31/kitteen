@@ -32,7 +32,7 @@ export default function InactionCost() {
           </div>
 
           <a
-            href="#preco"
+            href="#conteudo"
             className="inline-flex items-center justify-center bg-white text-accent font-inter font-bold text-base px-10 py-4 rounded-full transition-all duration-200 hover:bg-[#FFE5B4] hover:scale-[1.02] min-h-[44px]"
           >
             Quero meu kit agora
