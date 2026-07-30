@@ -32,8 +32,8 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.08, ease: "easeOut" }}
           className="font-fraunces font-bold text-2xl md:text-5xl lg:text-6xl text-text-primary leading-tight tracking-tight max-w-4xl"
         >
-          +80 RECURSOS TERAPÊUTICOS PARA QUALQUER DEMANDA QUE{" "}
-          <span className="text-accent">ENTRAR NO SEU CONSULTÓRIO.</span>
+          <span className="text-accent">+80 RECURSOS TERAPÊUTICOS</span>{" "}
+          PARA QUALQUER DEMANDA QUE ENTRAR NO SEU CONSULTÓRIO.
         </motion.h1>
 
         <motion.p
