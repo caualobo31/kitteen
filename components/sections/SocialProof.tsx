@@ -25,7 +25,7 @@ export default function SocialProof() {
   const next = () => go(current === images.length - 1 ? 0 : current + 1);
 
   return (
-    <section className="bg-background px-5 md:px-8 py-14 md:py-20">
+    <section id="depoimentos" className="bg-background px-5 md:px-8 py-14 md:py-20">
       <div className="max-w-6xl mx-auto">
         <SectionHeader
           title={<><span className="text-accent">Quem já testou</span> conta:</>}

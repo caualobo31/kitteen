@@ -164,7 +164,7 @@ export default function Stack() {
           className="text-center"
         >
           <a
-            href="#preco"
+            href="#depoimentos"
             className="inline-flex items-center justify-center bg-accent hover:bg-accent-hover text-white font-inter font-bold text-base px-12 py-5 rounded-full transition-all duration-200 hover:scale-[1.02] hover:shadow-lg hover:shadow-accent/20 min-h-[44px]"
           >
             Quero o kit completo
