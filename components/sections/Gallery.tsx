@@ -19,15 +19,6 @@ export default function Gallery() {
         />
       </div>
 
-      <div className="flex justify-center mb-8">
-        <a
-          href="#conteudo"
-          className="inline-flex items-center justify-center bg-accent hover:bg-accent-hover text-white font-inter font-semibold text-sm px-8 py-3 rounded-full transition-all duration-200 hover:scale-[1.02] hover:shadow-lg hover:shadow-accent/20 min-h-[44px]"
-        >
-          Ver tudo o que está incluído
-        </a>
-      </div>
-
       <div className="overflow-hidden">
         <div className="flex gap-4 w-max animate-marquee">
           {[...mockups, ...mockups].map((src, i) => (
@@ -45,6 +36,15 @@ export default function Gallery() {
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="flex justify-center mt-8">
+        <a
+          href="#conteudo"
+          className="inline-flex items-center justify-center bg-accent hover:bg-accent-hover text-white font-inter font-semibold text-sm px-8 py-3 rounded-full transition-all duration-200 hover:scale-[1.02] hover:shadow-lg hover:shadow-accent/20 min-h-[44px]"
+        >
+          Ver tudo o que está incluído
+        </a>
       </div>
     </section>
   );
