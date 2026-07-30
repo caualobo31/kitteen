@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { Zap, Shield, Lock } from "lucide-react";
 
 const trust = [
@@ -13,13 +10,7 @@ export default function InactionCost() {
   return (
     <section className="bg-accent px-5 md:px-8 py-14 md:py-20">
       <div className="max-w-4xl mx-auto text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          className="flex flex-col items-center gap-8"
-        >
+        <div className="flex flex-col items-center gap-8 anim-fade-up">
           <div>
             <h2 className="font-fraunces font-semibold text-2xl md:text-4xl leading-tight tracking-tight mb-4 text-white">
               Seu paciente adolescente merece recursos feitos pra ele.
@@ -46,7 +37,7 @@ export default function InactionCost() {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

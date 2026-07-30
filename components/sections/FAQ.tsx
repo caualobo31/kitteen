@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import {
   Accordion,
   AccordionContent,
@@ -45,16 +44,10 @@ export default function FAQ() {
     <section className="bg-surface-2 px-5 md:px-8 py-14 md:py-20">
       <div className="max-w-6xl mx-auto">
         <SectionHeader
-title={<>Respondendo <span className="text-accent">o que você tá pensando</span> agora.</>}
+          title={<>Respondendo <span className="text-accent">o que você tá pensando</span> agora.</>}
         />
 
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-40px" }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
-          className="max-w-3xl mx-auto mb-12"
-        >
+        <div className="max-w-3xl mx-auto mb-12">
           <Accordion multiple={false} className="flex flex-col gap-2">
             {faqs.map((faq, i) => (
               <AccordionItem
@@ -71,22 +64,16 @@ title={<>Respondendo <span className="text-accent">o que você tá pensando</spa
               </AccordionItem>
             ))}
           </Accordion>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
-          className="text-center"
-        >
+        <div className="text-center">
           <a
             href="#preco"
             className="inline-flex items-center justify-center bg-accent hover:bg-accent-hover text-white font-inter font-semibold text-base px-10 py-5 rounded-full transition-all duration-200 hover:scale-[1.02] hover:shadow-lg hover:shadow-accent/20 min-h-[44px]"
           >
             Quero meu kit agora
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

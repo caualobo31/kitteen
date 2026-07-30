@@ -1,7 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 import { ReactNode } from "react";
 
 interface Props {
@@ -12,13 +8,7 @@ interface Props {
 
 export default function SectionHeader({ caption, title, subtitle }: Props) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 16 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.4, ease: "easeOut" }}
-      className="text-center mb-10 md:mb-12"
-    >
+    <div className="text-center mb-10 md:mb-12 anim-fade-up">
       {caption && (
         <p className="text-xs uppercase tracking-widest text-accent font-inter font-semibold mb-4">
           {caption}
@@ -32,6 +22,6 @@ export default function SectionHeader({ caption, title, subtitle }: Props) {
           {subtitle}
         </p>
       )}
-    </motion.div>
+    </div>
   );
 }

@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { Zap, Printer, LayoutGrid, Layers, Monitor } from "lucide-react";
 import Image from "next/image";
 
@@ -17,39 +14,30 @@ export default function Hero() {
     <section className="bg-background px-5 md:px-8 py-14 md:py-20">
       <div className="max-w-6xl mx-auto flex flex-col items-center text-center gap-6">
 
-        <motion.p
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
-          className="text-xs uppercase tracking-widest text-accent font-inter font-semibold"
+        <p
+          className="text-xs uppercase tracking-widest text-accent font-inter font-semibold anim-fade-up"
         >
           Atenda adolescentes sem improvisar, sem adaptar e sem travar.
-        </motion.p>
+        </p>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.08, ease: "easeOut" }}
-          className="font-fraunces font-bold text-2xl md:text-5xl lg:text-6xl text-text-primary leading-tight tracking-tight max-w-4xl"
+        <h1
+          className="font-fraunces font-bold text-2xl md:text-5xl lg:text-6xl text-text-primary leading-tight tracking-tight max-w-4xl anim-fade-up"
+          style={{ animationDelay: "80ms" }}
         >
           <span className="text-accent">+80 RECURSOS TERAPÊUTICOS</span>{" "}
           PARA QUALQUER DEMANDA QUE ENTRAR NO SEU CONSULTÓRIO.
-        </motion.h1>
+        </h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.16, ease: "easeOut" }}
-          className="text-sm md:text-base text-text-muted font-inter leading-relaxed max-w-xl"
+        <p
+          className="text-sm md:text-base text-text-muted font-inter leading-relaxed max-w-xl anim-fade-up"
+          style={{ animationDelay: "160ms" }}
         >
           Material pronto pra aplicar, com a linguagem que ele respeita.
-        </motion.p>
+        </p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.22, ease: "easeOut" }}
-          className="w-full max-w-sm md:max-w-3xl mx-auto"
+        <div
+          className="w-full max-w-sm md:max-w-3xl mx-auto anim-fade-up"
+          style={{ animationDelay: "220ms" }}
         >
           <Image
             src="/mockupteen.png"
@@ -60,13 +48,11 @@ export default function Hero() {
             className="w-full h-auto rounded-2xl"
             priority
           />
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.3, ease: "easeOut" }}
-          className="flex flex-col items-center gap-3 w-full"
+        <div
+          className="flex flex-col items-center gap-3 w-full anim-fade-up"
+          style={{ animationDelay: "300ms" }}
         >
           <a
             href="#preco"
@@ -77,13 +63,11 @@ export default function Hero() {
           <p className="text-sm text-text-subtle font-inter">
             +2000 psicólogas já confiam nos Kits Consultório.
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.4, ease: "easeOut" }}
-          className="flex flex-wrap justify-center gap-x-6 gap-y-3"
+        <div
+          className="flex flex-wrap justify-center gap-x-6 gap-y-3 anim-fade-up"
+          style={{ animationDelay: "400ms" }}
         >
           {features.map(({ icon: Icon, label }) => (
             <div key={label} className="flex items-center gap-2">
@@ -93,7 +77,7 @@ export default function Hero() {
               </span>
             </div>
           ))}
-        </motion.div>
+        </div>
 
       </div>
     </section>

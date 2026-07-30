@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Check, Gift } from "lucide-react";
 import Image from "next/image";
 import { useState, useEffect } from "react";
@@ -19,17 +18,11 @@ function Countdown() {
   const ss = String(secs % 60).padStart(2, "0");
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.4 }}
-      className="flex justify-center mb-6"
-    >
+    <div className="flex justify-center mb-6 anim-fade-up">
       <span className="bg-accent/10 text-accent font-inter font-bold text-xs md:text-sm px-6 py-2 rounded-full tracking-widest uppercase">
         Oferta válida até: {mm}:{ss}
       </span>
-    </motion.div>
+    </div>
   );
 }
 
@@ -67,12 +60,9 @@ export default function PricingLadder() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto items-start">
 
           {/* Card Básico */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-40px" }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
-            className="bg-surface-1 border border-border rounded-2xl p-8 flex flex-col gap-5"
+          <div
+            className="bg-surface-1 border border-border rounded-2xl p-8 flex flex-col gap-5 anim-fade-up"
+            style={{ animationDelay: "0ms" }}
           >
             <p className="text-xs uppercase tracking-widest text-text-subtle font-inter font-semibold text-center">
               Kit Básico
@@ -126,16 +116,12 @@ export default function PricingLadder() {
                 Por apenas R$18 a mais
               </p>
             </div>
-          </motion.div>
+          </div>
 
           {/* Card Completo */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-40px" }}
-            transition={{ duration: 0.4, delay: 0.08, ease: "easeOut" }}
-            whileHover={{ scale: 1.01 }}
-            className="relative bg-highlight rounded-2xl p-8 flex flex-col gap-5 shadow-[0_8px_32px_rgba(61,90,74,0.25)]"
+          <div
+            className="relative bg-highlight rounded-2xl p-8 flex flex-col gap-5 shadow-[0_8px_32px_rgba(61,90,74,0.25)] hover:scale-[1.01] transition-transform duration-200 anim-fade-up"
+            style={{ animationDelay: "80ms" }}
           >
             {/* Badge Mais vendido */}
             <div className="absolute -top-4 left-1/2 -translate-x-1/2">
@@ -219,7 +205,7 @@ export default function PricingLadder() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
         </div>
       </div>

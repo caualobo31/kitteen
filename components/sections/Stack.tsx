@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import Image from "next/image";
 
@@ -47,25 +44,11 @@ export default function Stack() {
     <section id="conteudo" className="bg-surface-2 px-5 md:px-8 py-14 md:py-20">
       <div className="max-w-5xl mx-auto">
 
-        {/* Título */}
-        <motion.h2
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
-          className="font-fraunces font-semibold text-2xl md:text-4xl text-text-primary text-center mb-10 md:mb-14 leading-tight tracking-tight"
-        >
+        <h2 className="font-fraunces font-semibold text-2xl md:text-4xl text-text-primary text-center mb-10 md:mb-14 leading-tight tracking-tight anim-fade-up">
           Tudo o que você <span className="text-highlight">vai receber</span>
-        </motion.h2>
+        </h2>
 
-        {/* Produto principal */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          className="flex flex-col md:flex-row gap-8 items-center mb-8"
-        >
+        <div className="flex flex-col md:flex-row gap-8 items-center mb-8 anim-fade-up" style={{ animationDelay: "80ms" }}>
           <div className="w-full md:w-72 flex-shrink-0">
             <Image
               src="/mockupteen.png"
@@ -98,43 +81,28 @@ export default function Stack() {
               ))}
             </div>
           </div>
-        </motion.div>
+        </div>
 
-        {/* Texto de transição */}
-        <motion.p
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
-          className="text-text-primary font-inter text-base md:text-lg leading-relaxed mb-6"
+        <p
+          className="text-text-primary font-inter text-base md:text-lg leading-relaxed mb-6 anim-fade-up"
+          style={{ animationDelay: "160ms" }}
         >
           E não para por aí. No kit completo, você ainda recebe 4 bônus que
           complementam o kit e resolvem as maiores dores do dia a dia clínico:
-        </motion.p>
+        </p>
 
-        {/* Badge */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
-          className="mb-6"
-        >
+        <div className="mb-6 anim-fade-up" style={{ animationDelay: "200ms" }}>
           <span className="inline-block bg-accent text-white font-inter font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full">
             4 Bônus Exclusivos
           </span>
-        </motion.div>
+        </div>
 
-        {/* Cards de bônus */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
           {bonuses.map(({ n, title, desc, from, full }, i) => (
-            <motion.div
+            <div
               key={n}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.07, ease: "easeOut" }}
-              className={`bg-surface-1 border border-border rounded-2xl p-6 flex gap-4 items-start${full ? " md:col-span-2" : ""}`}
+              className={`bg-surface-1 border border-border rounded-2xl p-6 flex gap-4 items-start anim-fade-up${full ? " md:col-span-2" : ""}`}
+              style={{ animationDelay: `${240 + i * 70}ms` }}
             >
               <div className="flex-shrink-0 w-10 h-10 rounded-full bg-highlight flex items-center justify-center">
                 <span className="text-white font-inter font-bold text-sm">{n}</span>
@@ -151,25 +119,18 @@ export default function Stack() {
                   <span className="font-bold text-highlight">GRÁTIS</span>
                 </p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
-          className="text-center"
-        >
+        <div className="text-center anim-fade-up" style={{ animationDelay: "480ms" }}>
           <a
             href="#depoimentos"
             className="inline-flex items-center justify-center bg-accent hover:bg-accent-hover text-white font-inter font-bold text-base px-12 py-5 rounded-full transition-all duration-200 hover:scale-[1.02] hover:shadow-lg hover:shadow-accent/20 min-h-[44px]"
           >
             Quero o kit completo
           </a>
-        </motion.div>
+        </div>
 
       </div>
     </section>

@@ -35,6 +35,16 @@
   to { transform: translateX(-50%); }
 }
 
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-16px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
 @layer utilities {
   .font-display {
     font-family: var(--font-fraunces), Georgia, serif;
@@ -46,5 +56,13 @@
 
   .animate-marquee {
     animation: marquee 32s linear infinite;
+  }
+
+  .anim-fade-up {
+    animation: fadeInUp 0.4s ease-out both;
+  }
+
+  .anim-fade-left {
+    animation: fadeInLeft 0.4s ease-out both;
   }
 }
