@@ -44,7 +44,7 @@ const bonuses = [
 
 export default function Stack() {
   return (
-    <section className="bg-surface-2 px-5 md:px-8 py-14 md:py-20">
+    <section id="conteudo" className="bg-surface-2 px-5 md:px-8 py-14 md:py-20">
       <div className="max-w-5xl mx-auto">
 
         {/* Título */}
