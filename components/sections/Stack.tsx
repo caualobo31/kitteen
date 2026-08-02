@@ -13,25 +13,25 @@ const bullets = [
 
 const bonuses = [
   {
-    n: "01",
+    img: "/bonus1.png",
     title: "Guia de Primeira Sessão com Adolescente",
     desc: `Roteiro de 8 passos pra fazer ele falar mais do que ${Q}sei lá${Q} no primeiro encontro.`,
     from: "R$47,00",
   },
   {
-    n: "02",
+    img: "/bonus2.png",
     title: `Cartilha ${Q}Conversando com os Pais${Q}`,
     desc: "Como conduzir a devolutiva familiar sem expor o adolescente.",
     from: "R$37,00",
   },
   {
-    n: "03",
+    img: "/bonus3.png",
     title: "Banco de Frases pra Destravar a Sessão",
     desc: "60 perguntas testadas pra quando ele trava ou responde monossilábico.",
     from: "R$27,00",
   },
   {
-    n: "04",
+    img: "/bonus4.png",
     title: "Modelos de Fichas de Anamnese e Devolutivas",
     desc: "Fichas prontas pra coletar histórico e devolver resultados aos pais de forma clara e profissional.",
     from: "R$37,00",
@@ -98,16 +98,23 @@ export default function Stack() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
-          {bonuses.map(({ n, title, desc, from, full }, i) => (
+          {bonuses.map(({ img, title, desc, from, full }, i) => (
             <div
-              key={n}
-              className={`bg-surface-1 border border-border rounded-2xl p-6 flex gap-4 items-start anim-fade-up${full ? " md:col-span-2" : ""}`}
+              key={img}
+              className={`bg-surface-1 border border-border rounded-2xl p-6 flex gap-5 items-start anim-fade-up${full ? " md:col-span-2" : ""}`}
               style={{ animationDelay: `${240 + i * 70}ms` }}
             >
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-highlight flex items-center justify-center">
-                <span className="text-white font-inter font-bold text-sm">{n}</span>
+              <div className="flex-shrink-0 w-20 md:w-24">
+                <Image
+                  src={img}
+                  alt={title}
+                  width={200}
+                  height={280}
+                  sizes="96px"
+                  className="w-full h-auto rounded-lg object-cover shadow-sm"
+                />
               </div>
-              <div>
+              <div className="flex-1">
                 <p className="font-inter font-bold text-text-primary text-sm md:text-base leading-tight mb-1">
                   {title}
                 </p>
