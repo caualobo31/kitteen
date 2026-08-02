@@ -3,8 +3,8 @@
 import { useEffect, useState, useRef } from "react";
 import { X, Check } from "lucide-react";
 
-const BASIC_URL = "https://pay.wiapy.com/iyCj7VBNAt";
-const PROMO_URL = "https://pay.wiapy.com/NZBL0sww06J";
+const BASIC_URL = "https://pay.cakto.com.br/397uo5h_986642";
+const PROMO_URL = "https://pay.cakto.com.br/5atfw47";
 
 const differentials = [
   "Os 4 bônus exclusivos que o básico não inclui",
