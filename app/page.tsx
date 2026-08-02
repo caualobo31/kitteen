@@ -9,10 +9,12 @@ import Guarantee from "@/components/sections/Guarantee";
 import FAQ from "@/components/sections/FAQ";
 import Footer from "@/components/sections/Footer";
 import UpsellPopup from "@/components/UpsellPopup";
+import TopBanner from "@/components/TopBanner";
 
 export default function Home() {
   return (
     <main className="bg-background min-h-screen">
+      <TopBanner />
       <Hero />
       <Gallery />
       <Transformation />
