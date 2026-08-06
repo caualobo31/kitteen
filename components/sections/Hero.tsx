@@ -55,7 +55,7 @@ export default function Hero() {
           style={{ animationDelay: "300ms" }}
         >
           <a
-            href="#preco"
+            href="#galeria"
             className="inline-flex items-center justify-center w-full md:w-auto bg-accent hover:bg-accent-hover text-white font-inter font-semibold text-base px-10 py-4 rounded-full transition-all duration-200 hover:scale-[1.02] hover:shadow-lg hover:shadow-accent/20 min-h-[44px]"
           >
             Quero meu kit agora

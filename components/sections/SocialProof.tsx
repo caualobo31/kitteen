@@ -82,16 +82,16 @@ export default function SocialProof() {
           </div>
         </div>
 
-        <div className="mt-10 text-center flex flex-col items-center gap-2">
+        <div className="mt-10 text-center flex flex-col items-center gap-4">
           <p className="text-text-muted font-inter text-sm">
             Oferta por tempo limitado. Garante o seu antes que encerre.
           </p>
           <a
             href="#preco"
-            className="flex flex-col items-center gap-0.5 text-highlight font-inter font-semibold text-sm hover:opacity-70 transition-opacity duration-200"
+            className="inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent-hover text-white font-inter font-bold text-base px-10 py-4 rounded-full transition-all duration-200 hover:scale-[1.02] hover:shadow-lg hover:shadow-accent/20 min-h-[44px] anim-cta-pulse"
           >
             Ver oferta
-            <ChevronsDown className="w-5 h-5" strokeWidth={2} />
+            <ChevronsDown className="w-5 h-5" strokeWidth={2.5} />
           </a>
         </div>
       </div>
