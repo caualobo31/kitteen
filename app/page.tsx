@@ -1,4 +1,5 @@
 import Hero from "@/components/sections/Hero";
+import MethodTeamSkills from "@/components/sections/MethodTeamSkills";
 import Gallery from "@/components/sections/Gallery";
 import Transformation from "@/components/sections/Transformation";
 import InactionCost from "@/components/sections/InactionCost";
@@ -16,6 +17,7 @@ export default function Home() {
     <main className="bg-background min-h-screen">
       <TopBanner />
       <Hero />
+      <MethodTeamSkills />
       <Gallery />
       <Transformation />
       <InactionCost />
