@@ -16,25 +16,25 @@ const cards = [
     icon: FileText,
     title: "Ele reage primeiro ao material",
     how: "A página traz uma cena, uma escolha, uma escala ou uma pergunta visual. Isso tira o peso de começar falando diretamente sobre si.",
-    img: "/exemplo1.png",
+    img: "/metodo1.png",
   },
   {
     icon: MessagesSquare,
     title: "Você conduz a partir da resposta",
     how: "O recurso não substitui sua escuta. Ele cria uma entrada para você aprofundar a conversa com mais clareza.",
-    img: "/exemplo2.png",
+    img: "/metodo2.png",
   },
   {
     icon: Glasses,
     title: "Sem cara de atividade infantil",
     how: "Os materiais foram adaptados para adolescentes, com linguagem mais madura e temas que fazem sentido para essa fase.",
-    img: "/exemplo3.png",
+    img: "/metodo3.png",
   },
   {
     icon: Tags,
     title: "Separado por demandas reais",
     how: "Ansiedade, autoestima, redes sociais, conflito com os pais, identidade, relacionamentos, futuro e regulação emocional.",
-    img: "/exemplo4.png",
+    img: "/metodo4.png",
   },
 ];
 
