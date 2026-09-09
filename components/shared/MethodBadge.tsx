@@ -13,7 +13,7 @@ export default function MethodBadge({ href, className = "" }: Props) {
     <>
       <Sparkles className="w-3.5 h-3.5 text-accent flex-shrink-0" strokeWidth={2} />
       <span>
-        Método <span className="font-semibold text-text-primary">Team Skills</span>
+        Método <span className="font-semibold text-text-primary">Teen Skills</span>
         {" · "}adaptado dos workbooks terapêuticos dos EUA
       </span>
     </>

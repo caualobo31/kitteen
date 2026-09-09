@@ -30,11 +30,8 @@ export default function Hero() {
           className="font-fraunces font-bold text-2xl md:text-5xl lg:text-6xl text-text-primary leading-tight tracking-tight max-w-4xl anim-fade-up"
           style={{ animationDelay: "160ms" }}
         >
-          {/* Alternativas prontas p/ teste:
-              B) <span className="text-accent">+80 RECURSOS TERAPÊUTICOS VISUAIS</span>{" "}PRA CADA DEMANDA DO SEU CONSULTÓRIO.
-              C) <span className="text-accent">+80 RECURSOS TERAPÊUTICOS VISUAIS</span>{" "}PRA ATENDER ADOLESCENTE. */}
           <span className="text-accent">+80 RECURSOS TERAPÊUTICOS VISUAIS</span>{" "}
-          PRA QUALQUER DEMANDA TEEN.
+          PARA QUALQUER DEMANDA QUE ENTRAR NO SEU CONSULTÓRIO.
         </h1>
 
         <p

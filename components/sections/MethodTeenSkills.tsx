@@ -3,62 +3,55 @@
 import { useState } from "react";
 import Image from "next/image";
 import {
+  FileText,
   MessagesSquare,
-  ListChecks,
-  MessageSquareText,
-  Users,
+  Glasses,
+  Tags,
   ArrowRight,
 } from "lucide-react";
 import SectionHeader from "@/components/shared/SectionHeader";
-import MethodBadge from "@/components/shared/MethodBadge";
-
-const Q = '"';
 
 const cards = [
   {
-    icon: MessagesSquare,
-    title: "Ele responde a página, não você",
-    how: "O material fica no centro da mesa. Ele projeta na atividade o que não diria te encarando.",
+    icon: FileText,
+    title: "Ele reage primeiro ao material",
+    how: "A página traz uma cena, uma escolha, uma escala ou uma pergunta visual. Isso tira o peso de começar falando diretamente sobre si.",
     img: "/exemplo1.png",
   },
   {
-    icon: ListChecks,
-    title: "Passo a passo, nunca página em branco",
-    how: "Todo recurso tem começo, meio e fim — igual aos workbooks dos EUA. Você conduz sem travar.",
+    icon: MessagesSquare,
+    title: "Você conduz a partir da resposta",
+    how: "O recurso não substitui sua escuta. Ele cria uma entrada para você aprofundar a conversa com mais clareza.",
     img: "/exemplo2.png",
   },
   {
-    icon: MessageSquareText,
-    title: "Sem infantilizar, sem psicologuês",
-    how: "Visual e direto, na linguagem da idade dele. Ele não revira os olhos quando vê.",
+    icon: Glasses,
+    title: "Sem cara de atividade infantil",
+    how: "Os materiais foram adaptados para adolescentes, com linguagem mais madura e temas que fazem sentido para essa fase.",
     img: "/exemplo3.png",
   },
   {
-    icon: Users,
-    title: "Vocês dois do mesmo lado",
-    how: `Terapeuta e adolescente olhando juntos pro material. Esse é o ${Q}Team${Q} do método.`,
+    icon: Tags,
+    title: "Separado por demandas reais",
+    how: "Ansiedade, autoestima, redes sociais, conflito com os pais, identidade, relacionamentos, futuro e regulação emocional.",
     img: "/exemplo4.png",
   },
 ];
 
-export default function MethodTeamSkills() {
+export default function MethodTeenSkills() {
   const [active, setActive] = useState<number | null>(null);
 
   return (
     <section id="metodo" className="bg-surface-1 px-5 md:px-8 py-14 md:py-20">
       <div className="max-w-6xl mx-auto">
 
-        <div className="flex justify-center mb-5 anim-fade-up">
-          <MethodBadge />
-        </div>
-
         <SectionHeader
-          caption="Método Team Skills"
-          title={<>O adolescente abre com a <span className="text-accent">página</span>. Não com a pergunta.</>}
-          subtitle="A lógica dos workbooks terapêuticos dos EUA, adaptada pro seu consultório — o material puxa a conversa por você."
+          caption="Método Teen Skills"
+          title={<>Uma lógica diferente para fazer o adolescente <span className="text-accent">entrar na conversa</span>.</>}
+          subtitle="O Método Teen Skills adapta a lógica dos workbooks terapêuticos dos EUA para transformar cada recurso em uma ponte: o adolescente responde a página primeiro, e você conduz a conversa a partir dali."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 gap-3 md:gap-5 max-w-4xl mx-auto">
           {cards.map(({ icon: Icon, title, how, img }, i) => {
             const isOpen = active === i;
             return (
@@ -67,15 +60,15 @@ export default function MethodTeamSkills() {
                 type="button"
                 onClick={() => setActive(isOpen ? null : i)}
                 aria-expanded={isOpen}
-                className="group text-left bg-surface-1 border border-border rounded-2xl overflow-hidden anim-fade-up transition-colors duration-200 hover:border-accent/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/40"
+                className="group flex flex-col text-left bg-surface-1 border border-border rounded-2xl overflow-hidden anim-fade-up transition-colors duration-200 hover:border-accent/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/40"
                 style={{ animationDelay: `${120 + i * 80}ms` }}
               >
-                <div className="relative h-40 overflow-hidden">
+                <div className="relative h-28 sm:h-36 md:h-40 overflow-hidden">
                   <Image
                     src={img}
                     alt={`Recurso do Kit Consultório Teen — ${title}`}
                     fill
-                    sizes="(min-width: 768px) 400px, calc(100vw - 40px)"
+                    sizes="(min-width: 768px) 400px, 50vw"
                     className={`object-cover transition-transform duration-500 ease-out md:group-hover:scale-105 ${isOpen ? "scale-105" : ""}`}
                   />
                   <div
@@ -83,10 +76,10 @@ export default function MethodTeamSkills() {
                   />
                 </div>
 
-                <div className="p-5 md:p-6">
-                  <div className="flex items-start gap-3">
-                    <Icon className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" strokeWidth={2} />
-                    <p className="font-fraunces font-semibold text-base md:text-lg text-text-primary leading-snug">
+                <div className="flex flex-col flex-1 p-4 md:p-6">
+                  <div className="flex items-start gap-2.5">
+                    <Icon className="w-4 h-4 md:w-5 md:h-5 text-accent flex-shrink-0 mt-0.5" strokeWidth={2} />
+                    <p className="font-fraunces font-semibold text-sm md:text-lg text-text-primary leading-snug">
                       {title}
                     </p>
                   </div>
@@ -96,13 +89,13 @@ export default function MethodTeamSkills() {
                       isOpen ? "grid-rows-[1fr] opacity-100 mt-3" : "grid-rows-[0fr] opacity-0 mt-0"
                     }`}
                   >
-                    <p className="overflow-hidden pl-8 text-sm text-text-muted font-inter leading-relaxed">
+                    <p className="overflow-hidden text-xs md:text-sm text-text-muted font-inter leading-relaxed">
                       {how}
                     </p>
                   </div>
 
                   <p
-                    className={`md:hidden mt-3 pl-8 text-[10px] uppercase tracking-widest text-text-subtle font-inter font-semibold ${
+                    className={`md:hidden mt-auto pt-3 text-[10px] uppercase tracking-widest text-text-subtle font-inter font-semibold ${
                       isOpen ? "hidden" : ""
                     }`}
                   >
