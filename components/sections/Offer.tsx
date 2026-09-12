@@ -29,25 +29,34 @@ const bonuses = [
   "Bônus 4: Fichas de Anamnese e Devolutivas",
 ];
 
+function secsUntilEndOfDay() {
+  const now = new Date();
+  const end = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59, 999);
+  return Math.max(0, Math.floor((end.getTime() - now.getTime()) / 1000));
+}
+
 function ScarcityCountdown() {
-  const [secs, setSecs] = useState(10 * 60);
+  const [secs, setSecs] = useState<number | null>(null);
 
   useEffect(() => {
-    if (secs <= 0) return;
-    const id = setInterval(() => setSecs((s) => s - 1), 1000);
+    setSecs(secsUntilEndOfDay());
+    const id = setInterval(() => setSecs(secsUntilEndOfDay()), 1000);
     return () => clearInterval(id);
-  }, [secs]);
+  }, []);
 
-  const mm = String(Math.floor(secs / 60)).padStart(2, "0");
+  if (secs === null) return null;
+
+  const hh = String(Math.floor(secs / 3600)).padStart(2, "0");
+  const mm = String(Math.floor((secs % 3600) / 60)).padStart(2, "0");
   const ss = String(secs % 60).padStart(2, "0");
 
   return (
     <div className="flex flex-col items-center gap-1.5 bg-accent px-6 py-3.5 rounded-2xl shadow-[0_8px_24px_rgba(213,92,47,0.35)]">
       <span className="text-white/90 font-inter font-semibold text-[11px] md:text-xs uppercase tracking-widest text-center leading-snug">
-        Oferta especial disponível nesta página por:
+        Oferta especial disponível nesta página até o fim do dia:
       </span>
       <span className="font-fraunces font-bold text-2xl md:text-3xl text-white tabular-nums tracking-tight leading-none">
-        {mm}:{ss}
+        {hh}:{mm}:{ss}
       </span>
     </div>
   );
@@ -102,7 +111,7 @@ export default function Offer() {
         {/* Total */}
         <div className="mt-7 anim-fade-up" style={{ animationDelay: "220ms" }}>
           <p className="text-white/70 font-inter text-sm mb-1">Você pagaria:</p>
-          <p className="font-fraunces font-bold text-4xl md:text-5xl text-red-400 line-through leading-none tracking-tight">
+          <p className="font-inter font-extrabold text-4xl md:text-5xl text-red-400 line-through leading-tight tracking-tight">
             {totalValue}
           </p>
         </div>

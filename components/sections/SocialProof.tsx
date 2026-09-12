@@ -90,7 +90,7 @@ export default function SocialProof() {
             href="#preco"
             className="inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent-hover text-white font-inter font-bold text-base px-10 py-4 rounded-full transition-all duration-200 hover:scale-[1.02] hover:shadow-lg hover:shadow-accent/20 min-h-[44px] anim-cta-pulse"
           >
-            Ver oferta
+            Também quero acessar o material completo
             <ChevronsDown className="w-5 h-5" strokeWidth={2.5} />
           </a>
         </div>
