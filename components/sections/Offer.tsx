@@ -59,18 +59,17 @@ export default function Offer() {
       <div className="max-w-md mx-auto flex flex-col items-center text-center">
 
         <h2 className="font-fraunces font-semibold text-2xl md:text-4xl text-white leading-tight tracking-tight anim-fade-up">
-          Por muito menos do que um único recurso físico, você leva um{" "}
-          <span className="text-accent">acervo completo</span> para atender
-          adolescentes.
+          Mais de <span className="text-accent">190 materiais</span> por
+          menos do que um único baralho terapêutico.
         </h2>
 
         <p
           className="mt-4 text-sm md:text-base text-white/80 font-inter leading-relaxed max-w-sm anim-fade-up"
           style={{ animationDelay: "80ms" }}
         >
-          Ao invés de comprar materiais avulsos para cada demanda, você
-          recebe tudo em um único acesso, pronto para imprimir e usar nas
-          suas sessões com adolescentes.
+          Em vez de pagar caro em um material para cada demanda, você leva
+          um acervo completo, organizado por tema e pronto para usar na
+          sessão.
         </p>
 
         {/* Tabela de valor */}
