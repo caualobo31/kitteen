@@ -1,6 +1,5 @@
 import { Zap, Printer, LayoutGrid, Layers, Monitor } from "lucide-react";
 import Image from "next/image";
-import MethodBadge from "@/components/shared/MethodBadge";
 
 const features = [
   { icon: Zap, label: "Acesso imediato após a compra" },
@@ -15,20 +14,15 @@ export default function Hero() {
     <section className="bg-background px-5 md:px-8 py-14 md:py-20">
       <div className="max-w-6xl mx-auto flex flex-col items-center text-center gap-6">
 
-        <div className="anim-fade-up">
-          <MethodBadge href="#metodo" />
-        </div>
-
         <p
           className="text-xs uppercase tracking-widest text-accent font-inter font-semibold anim-fade-up"
-          style={{ animationDelay: "80ms" }}
         >
           Atenda adolescentes sem improvisar, sem adaptar e sem travar.
         </p>
 
         <h1
           className="font-fraunces font-bold text-2xl md:text-5xl lg:text-6xl text-text-primary leading-tight tracking-tight max-w-4xl anim-fade-up"
-          style={{ animationDelay: "160ms" }}
+          style={{ animationDelay: "80ms" }}
         >
           <span className="text-accent">+80 RECURSOS TERAPÊUTICOS VISUAIS</span>{" "}
           PARA QUALQUER DEMANDA QUE ENTRAR NO SEU CONSULTÓRIO.
@@ -36,14 +30,14 @@ export default function Hero() {
 
         <p
           className="text-sm md:text-base text-text-muted font-inter leading-relaxed max-w-xl anim-fade-up"
-          style={{ animationDelay: "240ms" }}
+          style={{ animationDelay: "160ms" }}
         >
           Material pronto pra aplicar, com a linguagem que ele respeita.
         </p>
 
         <div
           className="w-full max-w-sm md:max-w-3xl mx-auto anim-fade-up"
-          style={{ animationDelay: "300ms" }}
+          style={{ animationDelay: "220ms" }}
         >
           <Image
             src="/mockupteen.png"
@@ -58,7 +52,7 @@ export default function Hero() {
 
         <div
           className="flex flex-col items-center gap-3 w-full anim-fade-up"
-          style={{ animationDelay: "380ms" }}
+          style={{ animationDelay: "300ms" }}
         >
           <a
             href="#galeria"
@@ -73,7 +67,7 @@ export default function Hero() {
 
         <div
           className="flex flex-wrap justify-center gap-x-6 gap-y-3 anim-fade-up"
-          style={{ animationDelay: "460ms" }}
+          style={{ animationDelay: "380ms" }}
         >
           {features.map(({ icon: Icon, label }) => (
             <div key={label} className="flex items-center gap-2">
