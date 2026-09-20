@@ -46,7 +46,6 @@ export default function MethodTeenSkills() {
       <div className="max-w-6xl mx-auto">
 
         <SectionHeader
-          caption="Método Teen Skills"
           title={<>Uma lógica diferente para fazer o adolescente <span className="text-accent">entrar na conversa</span>.</>}
           subtitle="O Método Teen Skills adapta a lógica dos workbooks terapêuticos dos EUA para transformar cada recurso em uma ponte: o adolescente responde a página primeiro, e você conduz a conversa a partir dali."
         />
