@@ -132,10 +132,10 @@ export default function Stack() {
 
         <div className="text-center anim-fade-up" style={{ animationDelay: "480ms" }}>
           <a
-            href="#depoimentos"
+            href="#preco"
             className="inline-flex items-center justify-center bg-accent hover:bg-accent-hover text-white font-inter font-bold text-base px-12 py-5 rounded-full transition-all duration-200 hover:scale-[1.02] hover:shadow-lg hover:shadow-accent/20 min-h-[44px]"
           >
-            Veja o que estão dizendo sobre os recursos
+            Quero o Kit Completo
           </a>
         </div>
 

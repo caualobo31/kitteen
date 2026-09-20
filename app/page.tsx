@@ -21,8 +21,8 @@ export default function Home() {
       <Gallery />
       <Transformation />
       <InactionCost />
-      <Stack />
       <SocialProof />
+      <Stack />
       <Offer />
       <Guarantee />
       <FAQ />
