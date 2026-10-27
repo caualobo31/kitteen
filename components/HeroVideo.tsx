@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { Play } from "lucide-react";
 
@@ -13,12 +13,32 @@ const THUMBNAIL_SRC: string | null = null;
 
 export default function HeroVideo() {
   const [playing, setPlaying] = useState(false);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+
+  // Só carrega o SDK do Vimeo depois do clique; garante som ligado e volume no máximo.
+  useEffect(() => {
+    if (!playing || !iframeRef.current) return;
+    let player: { destroy: () => Promise<void> } | undefined;
+    import("@vimeo/player").then(({ default: Player }) => {
+      if (!iframeRef.current) return;
+      const p = new Player(iframeRef.current);
+      player = p;
+      p.setMuted(false)
+        .then(() => p.setVolume(1))
+        .then(() => p.play())
+        .catch(() => {});
+    });
+    return () => {
+      player?.destroy().catch(() => {});
+    };
+  }, [playing]);
 
   return (
     <div className="relative w-full max-w-[340px] md:max-w-sm mx-auto aspect-[9/16] rounded-2xl overflow-hidden bg-text-primary shadow-lg shadow-accent/10">
       {playing ? (
         <iframe
-          src={`${VIDEO_SRC}&autoplay=1&muted=0`}
+          ref={iframeRef}
+          src={`${VIDEO_SRC}&autoplay=1`}
           title="Kit Consultório Teen — apresentação"
           allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
