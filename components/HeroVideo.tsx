@@ -23,9 +23,14 @@ export default function HeroVideo() {
       if (!iframeRef.current) return;
       const p = new Player(iframeRef.current);
       player = p;
+      // Sem autoplay na URL: em celulares (iOS) o play só toca com som se o toque for dentro do player.
+      // Aqui tentamos tocar com som; se o navegador bloquear ou deixar mudo, pausamos e
+      // deixamos o botão nativo do Vimeo para o visitante tocar (aí o som funciona).
       p.setMuted(false)
         .then(() => p.setVolume(1))
         .then(() => p.play())
+        .then(() => p.getMuted())
+        .then((muted) => (muted ? p.pause() : undefined))
         .catch(() => {});
     });
     return () => {
@@ -38,7 +43,7 @@ export default function HeroVideo() {
       {playing ? (
         <iframe
           ref={iframeRef}
-          src={`${VIDEO_SRC}&autoplay=1`}
+          src={`${VIDEO_SRC}&playsinline=1`}
           title="Kit Consultório Teen — apresentação"
           allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
@@ -70,7 +75,7 @@ export default function HeroVideo() {
               <Play className="w-9 h-9 md:w-10 md:h-10 ml-1 fill-current" strokeWidth={0} />
             </span>
             <span className="font-inter font-semibold text-sm md:text-base text-white bg-black/50 backdrop-blur-sm rounded-full px-5 py-2.5">
-              Toque para assistir com som
+              Toque para assistir
             </span>
           </span>
         </button>
