@@ -1,5 +1,5 @@
 import { Zap, Printer, LayoutGrid, Layers, Monitor } from "lucide-react";
-import Image from "next/image";
+import HeroVideo from "@/components/HeroVideo";
 
 const features = [
   { icon: Zap, label: "Acesso imediato após a compra" },
@@ -36,9 +36,10 @@ export default function Hero() {
         </p>
 
         <div
-          className="w-full max-w-sm md:max-w-3xl mx-auto anim-fade-up"
+          className="w-full max-w-3xl mx-auto anim-fade-up"
           style={{ animationDelay: "220ms" }}
         >
+          {/* Mockup temporariamente removido para o teste da mini VSL:
           <Image
             src="/mockupteen.png"
             alt="Kit Consultório Teen — recursos visuais terapêuticos para adolescentes"
@@ -47,7 +48,8 @@ export default function Hero() {
             sizes="(min-width: 768px) 768px, 100vw"
             className="w-full h-auto rounded-2xl"
             priority
-          />
+          /> */}
+          <HeroVideo />
         </div>
 
         <div

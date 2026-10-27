@@ -1,5 +1,4 @@
 import Hero from "@/components/sections/Hero";
-import MethodTeenSkills from "@/components/sections/MethodTeenSkills";
 import Gallery from "@/components/sections/Gallery";
 import Transformation from "@/components/sections/Transformation";
 import InactionCost from "@/components/sections/InactionCost";
@@ -17,7 +16,7 @@ export default function Home() {
     <main className="bg-background min-h-screen">
       <TopBanner />
       <Hero />
-      <MethodTeenSkills />
+      {/* Seção Método Teen Skills oculta temporariamente (teste de mini VSL). Para restaurar: <MethodTeenSkills /> */}
       <Gallery />
       <Transformation />
       <InactionCost />
