@@ -18,7 +18,7 @@ export default function HeroVideo() {
     <div className="relative w-full max-w-[340px] md:max-w-sm mx-auto aspect-[9/16] rounded-2xl overflow-hidden bg-text-primary shadow-lg shadow-accent/10">
       {playing ? (
         <iframe
-          src={`${VIDEO_SRC}&autoplay=1`}
+          src={`${VIDEO_SRC}&autoplay=1&muted=0`}
           title="Kit Consultório Teen — apresentação"
           allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
@@ -45,8 +45,13 @@ export default function HeroVideo() {
             <span className="absolute inset-0 bg-gradient-to-br from-accent/30 via-text-primary to-text-primary" />
           )}
           <span className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
-          <span className="relative flex items-center justify-center w-20 h-20 md:w-24 md:h-24 rounded-full bg-accent text-white shadow-xl shadow-black/30 ring-8 ring-white/25 transition-transform duration-200 group-hover:scale-105">
-            <Play className="w-9 h-9 md:w-10 md:h-10 ml-1 fill-current" strokeWidth={0} />
+          <span className="relative flex flex-col items-center gap-4 px-4 text-center">
+            <span className="flex items-center justify-center w-20 h-20 md:w-24 md:h-24 rounded-full bg-accent text-white shadow-xl shadow-black/30 ring-8 ring-white/25 transition-transform duration-200 group-hover:scale-105">
+              <Play className="w-9 h-9 md:w-10 md:h-10 ml-1 fill-current" strokeWidth={0} />
+            </span>
+            <span className="font-inter font-semibold text-sm md:text-base text-white bg-black/50 backdrop-blur-sm rounded-full px-5 py-2.5">
+              Toque para assistir com som
+            </span>
           </span>
         </button>
       )}
