@@ -3,6 +3,7 @@
 import { Check, Gift, ArrowDown } from "lucide-react";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { checkoutClick } from "@/lib/checkout";
 
 const valueItems = [
   { label: "+80 recursos terapêuticos visuais para adolescentes", price: "R$97,00" },
@@ -11,6 +12,8 @@ const valueItems = [
   { label: "Banco de Frases para Destravar a Sessão", price: "R$37,00" },
   { label: "Modelos de Fichas de Anamnese e Devolutivas", price: "R$47,00" },
 ];
+
+const CHECKOUT_URL = "https://pay.wiapy.com/1neK1z4ecL_";
 
 const totalValue = "R$235,00";
 
@@ -175,9 +178,8 @@ export default function Offer() {
           </div>
 
           <a
-            href="https://pay.wiapy.com/1neK1z4ecL_"
-            target="_blank"
-            rel="noopener noreferrer"
+            href={CHECKOUT_URL}
+            onClick={checkoutClick(CHECKOUT_URL)}
             className="inline-flex items-center justify-center w-full bg-accent hover:bg-accent-hover text-white font-inter font-semibold text-base px-10 py-5 rounded-full transition-all duration-200 hover:scale-[1.02] hover:shadow-lg hover:shadow-accent/30 min-h-[44px] anim-cta-pulse"
           >
             Quero o Kit Completo

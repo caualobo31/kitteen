@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import { X, Check } from "lucide-react";
+import { checkoutClick } from "@/lib/checkout";
 
 const BASIC_URL = "https://pay.wiapy.com/iyCj7VBNAt";
 const PROMO_URL = "https://pay.wiapy.com/NZBL0sww06J";
@@ -94,8 +95,7 @@ export default function UpsellPopup() {
 
           <a
             href={PROMO_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+            onClick={checkoutClick(PROMO_URL)}
             className="flex items-center justify-center w-full bg-accent hover:bg-accent-hover text-white font-inter font-bold text-base px-8 py-4 rounded-full transition-all duration-200 hover:scale-[1.02] hover:shadow-lg hover:shadow-accent/20 min-h-[44px] mb-3"
           >
             QUERO O COMPLETO POR R$29,90
@@ -103,8 +103,7 @@ export default function UpsellPopup() {
 
           <a
             href={BASIC_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+            onClick={checkoutClick(BASIC_URL)}
             className="flex items-center justify-center w-full text-text-subtle hover:text-text-muted font-inter text-sm py-2 transition-colors duration-200 min-h-[44px]"
           >
             Não, quero continuar com o básico por R$19,90
